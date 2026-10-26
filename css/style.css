@@ -259,8 +259,8 @@ nav a:hover {
 /* 5.2 Arch: fades and drifts as --p (scroll progress, 0 to 1) rises */
 .arch {
     box-sizing: border-box;
-    width: min(520px, 90vw, calc(88vh * 3 / 4.3));
-    aspect-ratio: 3 / 4.3;
+    width: min(680px, 92vw, calc(88vh * 4 / 4.5));
+    aspect-ratio: 4 / 4.5;
     clip-path: url(#arch-clip);
     background: linear-gradient(170deg, var(--arch-top), var(--arch-mid) 55%, var(--arch-bottom));
     display: grid;
@@ -354,5 +354,9 @@ nav a:hover {
 
     #theme-toggle {
         margin: 0.5rem 0 0;
+    }
+
+    .arch {
+        aspect-ratio: 3 / 4;
     }
 }

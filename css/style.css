@@ -259,14 +259,18 @@ nav a:hover {
 /* 5.2 Arch: fades and drifts as --p (scroll progress, 0 to 1) rises */
 .arch {
     box-sizing: border-box;
-    width: min(1600px, 98vw, calc(120vh * 4 / 4.5)); 
+    width: min(1200px, 92vw);
+    height: 70vh;
+    min-height: 460px;
     aspect-ratio: 4 / 4.5;
     clip-path: url(#arch-clip);
     background: linear-gradient(170deg, var(--arch-top), var(--arch-mid) 55%, var(--arch-bottom));
+    -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 3rem 1.5rem 1.5rem;
+    padding: 3rem 1.5rem 5rem;
     
     color: var(--arch-text);
     --text: var(--arch-text);

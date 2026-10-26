@@ -45,6 +45,12 @@
     --highlight: #c0304f;
     --plum: #5b2a6e;
     --border: #3a1f35;
+    --arch-top: #170826;
+    --arch-mid: #5b2a6e;
+    --arch-bottom: #8e1b3a;
+    --arch-text: #efe6ea;
+    --arch-muted: #d6c3d0;
+    --arch-accent: #e3b5d6;
 }
 
 /* 1.2 Light theme: system light mode */
@@ -60,6 +66,12 @@
         --highlight: #a3203f;
         --plum: #5b2a6e;
         --border: #d9cbd1;
+        --arch-top: #f7ecf4;
+        --arch-mid: #e0c8e0;
+        --arch-bottom: #ebb6c6;
+        --arch-text: #1a0c14;
+        --arch-muted: #5a4153;
+        --arch-accent: #7b1e3f;
     }
 }
 
@@ -75,6 +87,12 @@
     --highlight: #a3203f;
     --plum: #5b2a6e;
     --border: #d9cbd1;
+    --arch-top: #f7ecf4;
+    --arch-mid: #e0c8e0;
+    --arch-bottom: #ebb6c6;
+    --arch-text: #1a0c14;
+    --arch-muted: #5a4153;
+    --arch-accent: #7b1e3f;
 }
 
 
@@ -244,11 +262,16 @@ nav a:hover {
     width: min(520px, 90vw, calc(88vh * 3 / 4.3));
     aspect-ratio: 3 / 4.3;
     clip-path: url(#arch-clip);
-    background: linear-gradient(170deg, #170826, var(--plum) 55%, var(--accent-strong));
+    background: linear-gradient(170deg, var(--arch-top), var(--arch-mid) 55%, var(--arch-bottom));
     display: grid;
     place-items: center;
     text-align: center;
     padding: 3rem 1.5rem 1.5rem;
+    
+    color: var(--arch-text);
+    --text: var(--arch-text);
+    --muted: var(--arch-muted);
+    --accent: var(--arch-accent);
 
     opacity: calc(1 - var(--p, 0));
     transform: translateY(calc(var(--p, 0) * -40px)) scale(calc(1 - var(--p, 0) * 0.08));
@@ -316,20 +339,6 @@ nav a:hover {
    7. RESPONSIVE OVERRIDES
    Keep these last so they win over the base rules above.
    ========================================================================== */
-
-/* 7.1 Tablet and below */
-@media (max-width: 800px) {
-    #hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 2rem 0;
-    }
-
-    .hero-art {
-        order: -1;
-        max-width: 260px;
-    }
-}
 
 /* 7.2 Phone */
 @media (max-width: 600px) {

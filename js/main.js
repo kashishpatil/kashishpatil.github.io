@@ -1,7 +1,5 @@
 const root = document.documentElement;
 const button = document.getElementById("theme-toggle");
-const content = hero.querySelector(".hero-content");
-content.inert = progress > 0.5;
 
 function currentTheme() {
     return root.dataset.theme ||
@@ -22,3 +20,18 @@ button.addEventListener("click", () => {
 });
 
 updateButton();
+
+// Hero
+const hero = document.getElementById("hero");
+const heroContent = hero.querySelector(".hero-content");
+
+function updateHero() {
+    const distance = hero.offsetHeight - window.innerHeight;
+    const progress = Math.min(Math.max((window.scrollY - hero.offsetTop) / distance, 0), 1);
+    hero.style.setProperty("--p", progress);
+    heroContent.inert = progress > 0.5;
+}
+
+window.addEventListener("scroll", updateHero, {passive: true});
+window.addEventListener("resize", updateHero);
+updateHero

@@ -36,63 +36,63 @@
 /* 1.1 Dark theme (default) */
 :root {
     color-scheme: dark;
-    --bg: #230e1c;
-    --surface: #1b0d19;
-    --text: #efe6ea;
-    --muted: #b49cab;
-    --accent: #d49bc3;        /* orchid: headings, links, small details */
-    --accent-strong: #8e1b3a; /* wine: buttons, big decorative shapes */
-    --highlight: #c0304f;
-    --plum: #5b2a6e;
-    --border: #3a1f35;
-    --arch-top: #170826;
-    --arch-mid: #5b2a6e;
-    --arch-bottom: #8e1b3a;
-    --arch-text: #efe6ea;
-    --arch-muted: #d6c3d0;
-    --arch-accent: #e3b5d6;
+    --bg: #1a0a10;            /* near-black wine */
+    --surface: #26101a;
+    --text: #f0e6e8;
+    --muted: #b9a3a8;
+    --accent: #c39bd3;        /* orchid: headings, links */
+    --accent-strong: #a8132b; /* crimson: buttons */
+    --highlight: #d62839;
+    --plum: #4a1d5c;          /* deep violet */
+    --border: #3d1520;
+    --arch-top: #12061f;
+    --arch-mid: #4a1d5c;
+    --arch-bottom: #a8132b;
+    --arch-text: #f0e6e8;
+    --arch-muted: #dcc6cf;
+    --arch-accent: #d9b3e6;
 }
 
 /* 1.2 Light theme: system light mode */
 @media (prefers-color-scheme: light) {
     :root:not([data-theme="dark"]) {
         color-scheme: light;
-        --bg: #f1e9ec;
-        --surface: #fbf6f8;
-        --text: #1a0c14;
-        --muted: #66505f;
-        --accent: #7b1e3f;
-        --accent-strong: #7b1e3f;
-        --highlight: #a3203f;
-        --plum: #5b2a6e;
-        --border: #d9cbd1;
-        --arch-top: #f7ecf4;
-        --arch-mid: #e0c8e0;
-        --arch-bottom: #ebb6c6;
-        --arch-text: #3a1f35;
-        --arch-muted: #5a4153;
-        --arch-accent: #7b1e3f;
+        --bg: #f3ecec;
+        --surface: #fbf7f7;
+        --text: #1c0a10;
+        --muted: #5f4a52;
+        --accent: #8a1230;        /* deep crimson */
+        --accent-strong: #a8132b;
+        --highlight: #c1121f;
+        --plum: #4a1d5c;
+        --border: #dccfd2;
+        --arch-top: #f1e4f3;      /* pale orchid */
+        --arch-mid: #d9bfe3;
+        --arch-bottom: #e0707f;   /* soft crimson */
+        --arch-text: #2a1018;
+        --arch-muted: #52384a;
+        --arch-accent: #8a1230;
     }
 }
 
 /* 1.3 Light theme: toggle light mode */
 :root[data-theme="light"] {
-    color-scheme: light;
-    --bg: #f1e9ec;
-    --surface: #fbf6f8;
-    --text: #1a0c14;
-    --muted: #66505f;
-    --accent: #7b1e3f;
-    --accent-strong: #7b1e3f;
-    --highlight: #a3203f;
-    --plum: #5b2a6e;
-    --border: #d9cbd1;
-    --arch-top: #f7ecf4;
-    --arch-mid: #e0c8e0;
-    --arch-bottom: #ebb6c6;
-    --arch-text: #3a1f35;
-    --arch-muted: #5a4153;
-    --arch-accent: #7b1e3f;
+        color-scheme: light;
+        --bg: #f3ecec;
+        --surface: #fbf7f7;
+        --text: #1c0a10;
+        --muted: #5f4a52;
+        --accent: #8a1230;        /* deep crimson */
+        --accent-strong: #a8132b;
+        --highlight: #c1121f;
+        --plum: #4a1d5c;
+        --border: #dccfd2;
+        --arch-top: #f1e4f3;      /* pale orchid */
+        --arch-mid: #d9bfe3;
+        --arch-bottom: #e0707f;   /* soft crimson */
+        --arch-text: #2a1018;
+        --arch-muted: #52384a;
+        --arch-accent: #8a1230;
 }
 
 

@@ -259,7 +259,7 @@ nav a:hover {
 /* 5.2 Arch: fades and drifts as --p (scroll progress, 0 to 1) rises */
 .arch {
     box-sizing: border-box;
-    width: min(1600px, 92vw, calc(95vh * 4 / 4.5));
+    width: min(1600px, 98vw, calc(120vh * 4 / 4.5)); 
     aspect-ratio: 4 / 4.5;
     clip-path: url(#arch-clip);
     background: linear-gradient(170deg, var(--arch-top), var(--arch-mid) 55%, var(--arch-bottom));

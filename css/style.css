@@ -260,12 +260,14 @@ nav a:hover {
 .arch {
     box-sizing: border-box;
     width: min(1200px, 92vw);
-    height: 85vh;
+    height: 100vh;
     min-height: 460px;
     clip-path: url(#arch-clip);
     background: linear-gradient(170deg, var(--arch-top), var(--arch-mid) 55%, var(--arch-bottom));
-    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--p, 0) * 135%), transparent calc(100% - var(--p, 0) * 135% + 35%));
-    mask-image: linear-gradient(to bottom, #000 calc(100% - var(--p, 0) * 135%), transparent calc(100% - var(--p, 0) * 135% + 35%));
+    --fade-end: calc(100% - var(--p, 0) * 100%);
+    --fade-width: clamp(0%, calc(var(--p, 0) * 700%), 35%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(var(--fade-end) - var(--fade-width)), transparent var(--fade-end));
+    mask-image: linear-gradient(to bottom, #000 calc(var(--fade-end) - var(--fade-width)), transparent var(--fade-end));
     display: grid;
     place-items: center;
     text-align: center;

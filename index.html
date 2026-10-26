@@ -4,6 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kashish Patil</title>
+        <script>
+            try {
+                const saved = localStorage.getItem("theme");
+                if (saved) document.documentElement.dataset.theme = saved;
+            } catch (e) {}
+        </script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -14,6 +20,9 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <button id="theme-toggle" type="button" aria-label="Switch between light and dark mode">
+                Light mode
+            </button>
         </header>
 
         <main>
@@ -82,5 +91,6 @@
         <footer>
             <p>© Kashish Patil</p>
         </footer>
+        <script src="js/main.js"></script>
     </body>
 </html>

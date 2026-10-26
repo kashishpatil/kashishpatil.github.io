@@ -1,5 +1,7 @@
 const root = document.documentElement;
 const button = document.getElementById("theme-toggle");
+const content = hero.querySelector(".hero-content");
+content.inert = progress > 0.5;
 
 function currentTheme() {
     return root.dataset.theme ||

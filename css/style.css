@@ -260,7 +260,7 @@ nav a:hover {
 .arch {
     box-sizing: border-box;
     width: min(1200px, 92vw);
-    height: 70vh;
+    height: 85vh;
     min-height: 460px;
     clip-path: url(#arch-clip);
     background: linear-gradient(170deg, var(--arch-top), var(--arch-mid) 55%, var(--arch-bottom));
@@ -310,6 +310,7 @@ nav a:hover {
 
 .buttons {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
